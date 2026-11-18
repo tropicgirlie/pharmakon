@@ -27,7 +27,7 @@ export default function CountriesPage() {
             </h1>
             <p className="mt-8 max-w-2xl text-lg text-[color:var(--ink-soft)] leading-relaxed">
               Each land holds plants and the people who hold the plants. Open a shelf to read what the
-              elders remembered when the colonists forgot — or never knew.
+              elders remembered when the colonists forgot, or never knew.
             </p>
             <div className="mt-8 flex flex-wrap gap-2 text-sm">
               <span className="chip chip-ochre"><MaterialIcon name="public" style={{ fontSize: 14 }} /> {stats.totalCountries} lands</span>

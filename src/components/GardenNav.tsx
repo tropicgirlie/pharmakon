@@ -35,7 +35,7 @@ export default function GardenNav({ variant = "solid" }: { variant?: Variant }) 
             <MaterialIcon name="eco" filled className="text-[color:var(--bone)]" style={{ fontSize: 22 }} />
           </div>
           <div className="leading-none">
-            <div className="font-display text-xl tracking-brand text-[color:var(--ink)]">Plant Atlas</div>
+            <div className="font-display text-xl tracking-brand text-[color:var(--ink)]">Pharmakon</div>
             <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--ink-soft)]">The Living Archive</div>
           </div>
         </Link>

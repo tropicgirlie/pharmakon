@@ -24,7 +24,7 @@ export default function HomeFooter() {
           <p className="text-lg text-[color:var(--bone)]/85 max-w-2xl leading-relaxed">
             The archive grows with every entry that names its source and every reader who passes the
             knowledge on without pretending it began with them. If an elder, a community, or a healer
-            belongs on these pages and isn&apos;t — write and we&apos;ll listen.
+            belongs on these pages and isn&apos;t. Write and we&apos;ll listen.
           </p>
           <div className="flex flex-wrap gap-3 md:justify-end">
             <Link href="/explore" className="m3-filled">
@@ -32,7 +32,7 @@ export default function HomeFooter() {
               Open the archive
             </Link>
             <a
-              href="mailto:hello@plantatlas.org"
+              href="mailto:hello@pharmakon.garden"
               className="m3-tonal"
               style={{ background: "var(--ochre)", color: "var(--ink)" }}
             >
@@ -49,12 +49,12 @@ export default function HomeFooter() {
             <div className="w-8 h-8 rounded-xl bg-[color:var(--urucum)] flex items-center justify-center">
               <MaterialIcon name="eco" filled style={{ fontSize: 18 }} />
             </div>
-            <div>Plant Atlas · The Living Archive</div>
+            <div>Pharmakon · The Living Archive</div>
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <span>Knowledge credited to its keepers</span>
             <span>·</span>
-            <span>© {new Date().getFullYear()} — Public good</span>
+            <span>© {new Date().getFullYear()} · Public good</span>
           </div>
         </div>
       </div>

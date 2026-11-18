@@ -66,7 +66,7 @@ export default function PortalEntrance() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
-                Plant Atlas
+                Pharmakon
               </motion.h1>
 
               <motion.p

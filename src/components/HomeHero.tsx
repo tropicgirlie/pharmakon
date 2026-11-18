@@ -42,8 +42,8 @@ export default function HomeHero({ totalPlants, totalCountries }: { totalPlants:
             <p className="mt-10 text-lg md:text-xl text-[color:var(--ink-soft)] max-w-xl leading-relaxed">
               An archive of medicinal plants and the indigenous knowledge
               that has carried them for thousands of years. From ayahuasca to the
-              perfume oils woven into <span className="italic">Chanel N°5</span> —
-              the value belongs to the peoples who first knew them.
+              perfume oils woven into <span className="italic">Chanel N°5</span>, the
+              value belongs to the peoples who first knew them.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">

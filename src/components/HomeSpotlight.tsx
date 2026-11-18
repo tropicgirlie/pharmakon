@@ -31,7 +31,7 @@ const SPOTLIGHT: Array<{
   },
   {
     id: "cat-claw",
-    tagline: "A vine the Asháninka call ‘uña de gato’ — immunity encoded in the Amazon understory.",
+    tagline: "A vine the Asháninka call ‘uña de gato’. Immunity encoded in the Amazon understory.",
     keeper: "Asháninka · Peruvian Amazon",
     bg: "var(--sage)",
     text: "var(--ink)",
@@ -49,7 +49,7 @@ const SPOTLIGHT: Array<{
   },
   {
     id: "sangre-de-grado",
-    tagline: "‘Dragon's blood’ sap — a Shipibo wound dressing older than written medicine.",
+    tagline: "‘Dragon's blood’ sap. A Shipibo wound dressing older than written medicine.",
     keeper: "Shipibo-Conibo · Ucayali",
     bg: "var(--forest)",
     text: "var(--bone)",

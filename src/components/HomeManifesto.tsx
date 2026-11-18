@@ -19,7 +19,7 @@ const BLOCKS: Block[] = [
       </>
     ),
     body:
-      "Thousands of years of careful stewardship made the Amazon what it is. Every tree that heals, every bark that stains, every seed that sings — planted, pruned, remembered, taught from one generation to the next.",
+      "Thousands of years of careful stewardship made the Amazon what it is. People planted the trees that heal. People stripped the barks that stain. People saved the seeds that sing, and taught the next generation what each one does.",
     bg: "var(--urucum)",
     text: "var(--bone)",
     accent: "var(--sun)",

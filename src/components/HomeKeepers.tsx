@@ -44,7 +44,7 @@ export default function HomeKeepers() {
         <div className="mt-6 flex items-end justify-between flex-wrap gap-4">
           <p className="max-w-2xl text-lg text-[color:var(--ink-soft)] leading-relaxed">
             The archive is geographical because knowledge is. Open a shelf to read what the peoples
-            below authored — and still author today.
+            below authored, and still author today.
           </p>
           <Link href="/countries" className="m3-outline">
             <MaterialIcon name="map" style={{ fontSize: 20 }} />

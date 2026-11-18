@@ -1,5 +1,5 @@
 // ============================================================================
-// Plant Atlas — Global Botanical Data with Indigenous Knowledge
+// Pharmakon, Global Botanical Data with Indigenous Knowledge
 // ============================================================================
 
 export interface IndigenousKnowledge {
@@ -73,7 +73,7 @@ export const countries: Country[] = [
     region: "East Asia",
     emoji: "🇨🇳",
     description: "Traditional Chinese Medicine has documented over 11,000 medicinal substances over 2,500 years.",
-    climate: "Varied — temperate to subtropical",
+    climate: "Varied, temperate to subtropical",
     shelfColor: SHELF_COLORS[2],
     plantIds: ["ginseng", "goji", "astragalus", "dong-quai", "reishi"],
   },
@@ -240,7 +240,7 @@ export const plants: Record<string, Plant> = {
   "ashwagandha": {
     id: "ashwagandha", name: "Ashwagandha", scientificName: "Withania somnifera",
     family: "Solanaceae", emoji: "🍂", color: "#D2691E",
-    description: "The 'strength of a horse' — an adaptogenic root used in Ayurveda for over 3,000 years.",
+    description: "The 'strength of a horse', an adaptogenic root used in Ayurveda for over 3,000 years.",
     nativeTo: ["India", "Pakistan", "Sri Lanka"], habitats: ["Dry subtropical regions", "Wastelands"],
     medicinalUses: ["Adaptogen", "Stress relief", "Sleep aid", "Hormone balance"],
     traditionalUses: ["Rasayana (rejuvenation)", "Vajikarana (vitality)", "Balya (strength)"],
@@ -253,20 +253,20 @@ export const plants: Record<string, Plant> = {
   "neem": {
     id: "neem", name: "Neem", scientificName: "Azadirachta indica",
     family: "Meliaceae", emoji: "🌳", color: "#556B2F",
-    description: "The 'village pharmacy' — every part of this sacred tree has medicinal use in Indian tradition.",
+    description: "The 'village pharmacy', every part of this sacred tree has medicinal use in Indian tradition.",
     nativeTo: ["India", "Bangladesh"], habitats: ["Dry deciduous forests", "Village commons"],
     medicinalUses: ["Antimicrobial", "Antifungal", "Blood purifier", "Skin health"],
     traditionalUses: ["Dental hygiene (datun)", "Skin diseases", "Fever", "Diabetes"],
     partsUsed: ["Leaves", "Bark", "Seeds", "Oil"], tags: ["antimicrobial", "skin", "village-pharmacy", "sacred"],
     indigenousKnowledge: [
-      { practice: "Neem datun", community: "Rural communities", region: "All India", description: "Young twig chewed as natural toothbrush — antimicrobial and strengthens gums", uses: ["Dental health", "Oral hygiene"] },
-      { practice: "Neem leaf bath", community: "Women healers", region: "Maharashtra", description: "Leaves boiled in water for bathing — treats skin infections and purifies", uses: ["Skin diseases", "Postpartum care"] },
+      { practice: "Neem datun", community: "Rural communities", region: "All India", description: "Young twig chewed as natural toothbrush, antimicrobial and strengthens gums", uses: ["Dental health", "Oral hygiene"] },
+      { practice: "Neem leaf bath", community: "Women healers", region: "Maharashtra", description: "Leaves boiled in water for bathing, treats skin infections and purifies", uses: ["Skin diseases", "Postpartum care"] },
     ],
   },
   "turmeric": {
     id: "turmeric", name: "Turmeric", scientificName: "Curcuma longa",
     family: "Zingiberaceae", emoji: "🟡", color: "#FFD700",
-    description: "The golden spice — sacred in Hindu rituals and scientifically validated for potent anti-inflammatory action.",
+    description: "The golden spice, sacred in Hindu rituals and scientifically validated for potent anti-inflammatory action.",
     nativeTo: ["India"], habitats: ["Tropical cultivation", "Humid forests"],
     medicinalUses: ["Anti-inflammatory", "Antioxidant", "Wound healing", "Digestive aid"],
     traditionalUses: ["Haldi ceremony", "Cooking spice", "Skin brightening", "Cough remedy"],
@@ -279,25 +279,25 @@ export const plants: Record<string, Plant> = {
   "brahmi": {
     id: "brahmi", name: "Brahmi", scientificName: "Bacopa monnieri",
     family: "Plantaginaceae", emoji: "🌱", color: "#3CB371",
-    description: "The herb of enlightenment — used by yogis to sharpen memory and deepen meditation.",
+    description: "The herb of enlightenment, used by yogis to sharpen memory and deepen meditation.",
     nativeTo: ["India", "Sri Lanka"], habitats: ["Wetlands", "Rice paddies", "Marshes"],
     medicinalUses: ["Memory enhancer", "Nervine tonic", "Anxiolytic", "Antioxidant"],
     traditionalUses: ["Medhya rasayana (brain tonic)", "Meditation aid", "Epilepsy"],
     partsUsed: ["Whole plant"], tags: ["nootropic", "memory", "meditation", "rasayana"],
     indigenousKnowledge: [
-      { practice: "Brahmi ghrita", community: "Ayurvedic physicians", region: "Kerala", description: "Prepared in ghee — the traditional vehicle for brain-targeted herbs", uses: ["Memory", "Concentration", "Epilepsy"] },
+      { practice: "Brahmi ghrita", community: "Ayurvedic physicians", region: "Kerala", description: "Prepared in ghee, the traditional vehicle for brain-targeted herbs", uses: ["Memory", "Concentration", "Epilepsy"] },
     ],
   },
   "tulsi": {
     id: "tulsi", name: "Tulsi (Holy Basil)", scientificName: "Ocimum tenuiflorum",
     family: "Lamiaceae", emoji: "🌿", color: "#228B22",
-    description: "The Queen of Herbs — worshipped in Hindu households and scientifically shown to be an adaptogen.",
+    description: "The Queen of Herbs, worshipped in Hindu households and scientifically shown to be an adaptogen.",
     nativeTo: ["India"], habitats: ["Cultivated in households", "Tropical regions"],
     medicinalUses: ["Adaptogen", "Respiratory support", "Immune modulator", "Stress relief"],
     traditionalUses: ["Daily worship (Tulsi vrindavan)", "Fever", "Cough", "Heart tonic"],
     partsUsed: ["Leaves", "Seeds", "Roots"], tags: ["adaptogen", "sacred", "respiratory", "worship"],
     indigenousKnowledge: [
-      { practice: "Tulsi puja", community: "Hindu households", region: "All India", description: "Daily worship of Tulsi plant at home — believed to purify the environment", uses: ["Spiritual practice", "Air purification", "Mental peace"] },
+      { practice: "Tulsi puja", community: "Hindu households", region: "All India", description: "Daily worship of Tulsi plant at home, believed to purify the environment", uses: ["Spiritual practice", "Air purification", "Mental peace"] },
       { practice: "Tulsi kadha", community: "Traditional healers", region: "Uttar Pradesh", description: "Decoction with ginger, black pepper, and honey for colds and immunity", uses: ["Colds", "Immunity", "Respiratory health"] },
     ],
   },
@@ -305,7 +305,7 @@ export const plants: Record<string, Plant> = {
   "ginseng": {
     id: "ginseng", name: "Ginseng", scientificName: "Panax ginseng",
     family: "Araliaceae", emoji: "🥕", color: "#CD853F",
-    description: "The root of immortality — wild ginseng is so precious it has sparked gold rushes and wars.",
+    description: "The root of immortality, wild ginseng is so precious it has sparked gold rushes and wars.",
     nativeTo: ["China", "Korea", "Russia"], habitats: ["Mixed forests", "Mountain slopes"],
     medicinalUses: ["Adaptogen", "Immune modulator", "Cognitive enhancer", "Physical endurance"],
     traditionalUses: ["Qi tonic", "Longevity elixir", "Impotence", "Fatigue"],
@@ -318,7 +318,7 @@ export const plants: Record<string, Plant> = {
   "goji": {
     id: "goji", name: "Goji Berry", scientificName: "Lycium barbarum",
     family: "Solanaceae", emoji: "🍒", color: "#DC143C",
-    description: "Bright red berries from Ningxia — called 'happy berries' for their mood-lifting properties.",
+    description: "Bright red berries from Ningxia, called 'happy berries' for their mood-lifting properties.",
     nativeTo: ["China"], habitats: ["Ningxia region", "Dry hillsides"],
     medicinalUses: ["Eye health", "Immune support", "Antioxidant", "Liver tonic"],
     traditionalUses: ["Yin tonic", "Longevity tea", "Vision improvement"],
@@ -330,7 +330,7 @@ export const plants: Record<string, Plant> = {
   "astragalus": {
     id: "astragalus", name: "Astragalus", scientificName: "Astragalus membranaceus",
     family: "Fabaceae", emoji: "🌾", color: "#F0E68C",
-    description: "Huang Qi — the yellow leader — a foundational Qi tonic used to fortify the body's defenses.",
+    description: "Huang Qi, the yellow leader, a foundational Qi tonic used to fortify the body's defenses.",
     nativeTo: ["China", "Mongolia"], habitats: ["Grasslands", "Mountain slopes"],
     medicinalUses: ["Immune enhancement", "Fatigue", "Wound healing", "Diabetes support"],
     traditionalUses: ["Qi tonic", "Wei Qi (defensive energy)", "Diuretic", "Anti-aging"],
@@ -342,7 +342,7 @@ export const plants: Record<string, Plant> = {
   "dong-quai": {
     id: "dong-quai", name: "Dong Quai", scientificName: "Angelica sinensis",
     family: "Apiaceae", emoji: "🌸", color: "#FFB6C1",
-    description: "The 'female ginseng' — the most important blood tonic in Traditional Chinese Medicine for women.",
+    description: "The 'female ginseng', the most important blood tonic in Traditional Chinese Medicine for women.",
     nativeTo: ["China"], habitats: ["Mountain valleys", "High altitude meadows"],
     medicinalUses: ["Blood tonic", "Menstrual regulator", "Pain relief", "Circulation"],
     traditionalUses: ["Women's health", "Anemia", "Menopausal symptoms", "Dry skin"],
@@ -354,7 +354,7 @@ export const plants: Record<string, Plant> = {
   "reishi": {
     id: "reishi", name: "Reishi", scientificName: "Ganoderma lucidum",
     family: "Ganodermataceae", emoji: "🍄", color: "#8B0000",
-    description: "The Mushroom of Immortality — depicted in Chinese art for millennia as a symbol of longevity.",
+    description: "The Mushroom of Immortality, depicted in Chinese art for millennia as a symbol of longevity.",
     nativeTo: ["China", "Japan", "Korea"], habitats: ["Dead hardwood trees", "Forest floors"],
     medicinalUses: ["Immune modulation", "Stress adaptation", "Sleep support", "Liver protection"],
     traditionalUses: ["Shen tonic (spirit)", "Longevity", "Heart health", "Wisdom"],
@@ -367,7 +367,7 @@ export const plants: Record<string, Plant> = {
   "damiana": {
     id: "damiana", name: "Damiana", scientificName: "Turnera diffusa",
     family: "Passifloraceae", emoji: "🌼", color: "#FFD700",
-    description: "Aromatic shrub of the Mexican deserts — used by the Maya for love and the spirit.",
+    description: "Aromatic shrub of the Mexican deserts, used by the Maya for love and the spirit.",
     nativeTo: ["Mexico", "Central America"], habitats: ["Dry hills", "Rocky slopes"],
     medicinalUses: ["Aphrodisiac", "Anxiolytic", "Digestive aid", "Mood enhancer"],
     traditionalUses: ["Love potion", "Depression", "Digestive tonic", "Tea"],
@@ -379,7 +379,7 @@ export const plants: Record<string, Plant> = {
   "chaparro": {
     id: "chaparro", name: "Chaparro Amargoso", scientificName: "Castela erecta",
     family: "Simaroubaceae", emoji: "🌳", color: "#6B8E23",
-    description: "The bitter tree — a cornerstone of Mexican traditional medicine for digestive ailments.",
+    description: "The bitter tree, a cornerstone of Mexican traditional medicine for digestive ailments.",
     nativeTo: ["Mexico"], habitats: ["Dry tropical forests", "Thorn scrub"],
     medicinalUses: ["Antiparasitic", "Digestive stimulant", "Fever reduction", "Antibacterial"],
     traditionalUses: ["Amebiasis", "Dysentery", "Fever", "Stomach pain"],
@@ -391,7 +391,7 @@ export const plants: Record<string, Plant> = {
   "peyote": {
     id: "peyote", name: "Peyote", scientificName: "Lophophora williamsii",
     family: "Cactaceae", emoji: "🌵", color: "#2E8B57",
-    description: "The divine cactus — sacred to the Wixárika (Huichol) people for over 5,000 years.",
+    description: "The divine cactus, sacred to the Wixárika (Huichol) people for over 5,000 years.",
     nativeTo: ["Mexico", "United States"], habitats: ["Chihuahuan desert", "Limestone soils"],
     medicinalUses: ["Pain relief", "Anti-inflammatory", "Spiritual insight", "Addiction treatment"],
     traditionalUses: ["Religious ceremony", "Vision quests", "Healing rituals"],
@@ -404,7 +404,7 @@ export const plants: Record<string, Plant> = {
   "pasiflora": {
     id: "pasiflora", name: "Passionflower", scientificName: "Passiflora incarnata",
     family: "Passifloraceae", emoji: "🌺", color: "#9370DB",
-    description: "Named by Spanish missionaries for Christ's passion — a gentle sedative used by Aztec healers.",
+    description: "Named by Spanish missionaries for Christ's passion, a gentle sedative used by Aztec healers.",
     nativeTo: ["Mexico", "Central America"], habitats: ["Tropical forests", "Edges", "Gardens"],
     medicinalUses: ["Sedative", "Anxiolytic", "Sleep aid", "Muscle relaxant"],
     traditionalUses: ["Insomnia", "Nervousness", "Pain", "Seizures"],
@@ -416,7 +416,7 @@ export const plants: Record<string, Plant> = {
   "oregano-salvaje": {
     id: "oregano-salvaje", name: "Mexican Oregano", scientificName: "Lippia graveolens",
     family: "Verbenaceae", emoji: "🌿", color: "#556B2F",
-    description: "Wild oregano of the Mexican hills — more pungent than Mediterranean oregano with different chemistry.",
+    description: "Wild oregano of the Mexican hills, more pungent than Mediterranean oregano with different chemistry.",
     nativeTo: ["Mexico"], habitats: ["Dry hills", "Rocky slopes", "Thorn forest"],
     medicinalUses: ["Antimicrobial", "Digestive aid", "Respiratory support", "Antioxidant"],
     traditionalUses: ["Cooking", "Cough syrup", "Stomach tea", "Wound poultice"],
@@ -429,20 +429,20 @@ export const plants: Record<string, Plant> = {
   "moringa": {
     id: "moringa", name: "Moringa", scientificName: "Moringa oleifera",
     family: "Moringaceae", emoji: "🌿", color: "#228B22",
-    description: "The 'miracle tree' — every part is edible and medicinal, a lifeline in drought-prone regions.",
+    description: "The 'miracle tree', every part is edible and medicinal, a lifeline in drought-prone regions.",
     nativeTo: ["India", "Kenya", "Ethiopia"], habitats: ["Tropical drylands", "Village gardens"],
     medicinalUses: ["Nutrient-dense", "Anti-inflammatory", "Blood sugar support", "Antimicrobial"],
     traditionalUses: ["Malnutrition prevention", "Water purification", "Lactation support", "Anemia"],
     partsUsed: ["Leaves", "Pods", "Seeds", "Roots", "Flowers"], tags: ["superfood", "malnutrition", "miracle-tree", "drought"],
     indigenousKnowledge: [
       { practice: "Leaf powdering", community: "Rural women's groups", region: "Eastern Province", description: "Leaves dried and powdered for year-round nutrition supplementation", uses: ["Child nutrition", "HIV support", "Pregnancy"] },
-      { practice: "Seed water purification", community: "Traditional knowledge", region: "Turkana", description: "Crushed seeds clarify muddy water — a traditional water treatment", uses: ["Water purification", "Community health"] },
+      { practice: "Seed water purification", community: "Traditional knowledge", region: "Turkana", description: "Crushed seeds clarify muddy water, a traditional water treatment", uses: ["Water purification", "Community health"] },
     ],
   },
   "aloe-kenya": {
     id: "aloe-kenya", name: "Aloe", scientificName: "Aloe vera",
     family: "Asphodelaceae", emoji: "🌵", color: "#2E8B57",
-    description: "The burn plant — used across Kenya for skin conditions, digestive health, and livestock medicine.",
+    description: "The burn plant, used across Kenya for skin conditions, digestive health, and livestock medicine.",
     nativeTo: ["Kenya", "Somalia"], habitats: ["Dry savanna", "Rocky outcrops"],
     medicinalUses: ["Wound healing", "Burn treatment", "Laxative", "Skin moisturizer"],
     traditionalUses: ["Burns", "Constipation", "Skin rashes", "Livestock medicine"],
@@ -455,7 +455,7 @@ export const plants: Record<string, Plant> = {
   "warburgia": {
     id: "warburgia", name: "Warburgia", scientificName: "Warburgia ugandensis",
     family: "Canellaceae", emoji: "🌳", color: "#8B4513",
-    description: "The East African greenheart — bark so bitter it is called the 'devil's tree' by some, medicine by others.",
+    description: "The East African greenheart, bark so bitter it is called the 'devil's tree' by some, medicine by others.",
     nativeTo: ["Kenya", "Uganda", "Tanzania"], habitats: ["Montane forests", "Wooded grasslands"],
     medicinalUses: ["Antimalarial", "Antimicrobial", "Digestive stimulant", "Pain relief"],
     traditionalUses: ["Malaria", "Toothache", "Stomach complaints", "Colds"],
@@ -467,13 +467,13 @@ export const plants: Record<string, Plant> = {
   "prunus-africana": {
     id: "prunus-africana", name: "African Cherry", scientificName: "Prunus africana",
     family: "Rosaceae", emoji: "🌸", color: "#DDA0DD",
-    description: "The pygeum tree — its bark is the most exported African medicinal product, threatened by overharvesting.",
+    description: "The pygeum tree, its bark is the most exported African medicinal product, threatened by overharvesting.",
     nativeTo: ["Kenya", "Cameroon", "Madagascar"], habitats: ["Montane forests", "Afromontane"],
     medicinalUses: ["Prostate health", "Anti-inflammatory", "Urinary support", "Hair growth"],
     traditionalUses: ["Prostate enlargement", "Kidney problems", "Stomach pain", "Fever"],
     partsUsed: ["Bark"], tags: ["prostate", "pygeum", "threatened", "export"],
     indigenousKnowledge: [
-      { practice: "Sustainable bark harvest", community: "Mount Kenya communities", region: "Mount Kenya", description: "Stripping only portions of bark to allow tree survival — traditional conservation", uses: ["Prostate health", "Medicine", "Income"] },
+      { practice: "Sustainable bark harvest", community: "Mount Kenya communities", region: "Mount Kenya", description: "Stripping only portions of bark to allow tree survival, traditional conservation", uses: ["Prostate health", "Medicine", "Income"] },
     ],
   },
   "asphodel": {
@@ -492,7 +492,7 @@ export const plants: Record<string, Plant> = {
   "maca": {
     id: "maca", name: "Maca", scientificName: "Lepidium meyenii",
     family: "Brassicaceae", emoji: "🥔", color: "#DAA520",
-    description: "The Inca superfood — grown at 4,000m altitude, it thrives where almost nothing else can.",
+    description: "The Inca superfood, grown at 4,000m altitude, it thrives where almost nothing else can.",
     nativeTo: ["Peru"], habitats: ["High Andean plateaus", "Puna grassland"],
     medicinalUses: ["Hormone balance", "Energy", "Fertility", "Mood support"],
     traditionalUses: ["Stamina for Inca warriors", "Fertility", "Altitude sickness", "Anemia"],
@@ -505,7 +505,7 @@ export const plants: Record<string, Plant> = {
   "coca": {
     id: "coca", name: "Coca", scientificName: "Erythroxylum coca",
     family: "Erythroxylaceae", emoji: "🌿", color: "#006400",
-    description: "The divine leaf of the Andes — sacred to Inca and Quechua peoples, misused and misunderstood globally.",
+    description: "The divine leaf of the Andes, sacred to Inca and Quechua peoples, misused and misunderstood globally.",
     nativeTo: ["Peru", "Bolivia", "Colombia"], habitats: ["Andean slopes", "Cloud forests"],
     medicinalUses: ["Altitude sickness", "Digestive aid", "Energy", "Pain relief"],
     traditionalUses: ["Coca chewing (acullico)", "Divination", "Offerings to Pachamama", "Social exchange"],
@@ -518,19 +518,19 @@ export const plants: Record<string, Plant> = {
   "cat-claw": {
     id: "cat-claw", name: "Cat's Claw", scientificName: "Uncaria tomentosa",
     family: "Rubiaceae", emoji: "🌿", color: "#556B2F",
-    description: "A climbing vine with hooked thorns — the Asháninka people's gift to the world.",
+    description: "A climbing vine with hooked thorns, the Asháninka people's gift to the world.",
     nativeTo: ["Peru", "Brazil"], habitats: ["Amazon rainforest"],
     medicinalUses: ["Immune support", "Anti-inflammatory", "Antiviral", "Digestive aid"],
     traditionalUses: ["Inflammation", "Viral infections", "Stomach ulcers", "Wound healing"],
     partsUsed: ["Bark", "Root"], tags: ["immune", "anti-inflammatory", "amazon", "vines"],
     indigenousKnowledge: [
-      { practice: "Bark harvesting ritual", community: "Asháninka", region: "Central Amazon", description: "Permission asked from the vine spirit before harvesting — sustainable practices", uses: ["Arthritis", "Immunity", "Ulcers"] },
+      { practice: "Bark harvesting ritual", community: "Asháninka", region: "Central Amazon", description: "Permission asked from the vine spirit before harvesting, sustainable practices", uses: ["Arthritis", "Immunity", "Ulcers"] },
     ],
   },
   "sangre-de-grado": {
     id: "sangre-de-grado", name: "Sangre de Grado", scientificName: "Croton lechleri",
     family: "Euphorbiaceae", emoji: "🩸", color: "#8B0000",
-    description: "Dragon's blood — a tree that bleeds red sap, used by Amazonians as a liquid bandage.",
+    description: "Dragon's blood, a tree that bleeds red sap, used by Amazonians as a liquid bandage.",
     nativeTo: ["Peru", "Ecuador"], habitats: ["Amazon rainforest"],
     medicinalUses: ["Wound healing", "Antimicrobial", "Antiviral", "Stomach ulcers"],
     traditionalUses: ["Skin wounds", "Diarrhea", "Viral infections", "Gum disease"],
@@ -542,7 +542,7 @@ export const plants: Record<string, Plant> = {
   "chanca-piedra": {
     id: "chanca-piedra", name: "Chanca Piedra", scientificName: "Phyllanthus niruri",
     family: "Phyllanthaceae", emoji: "🌱", color: "#3CB371",
-    description: "The 'stone breaker' — Amazonian healers have used it to dissolve kidney stones for generations.",
+    description: "The 'stone breaker', Amazonian healers have used it to dissolve kidney stones for generations.",
     nativeTo: ["Peru", "Brazil", "India"], habitats: ["Tropical forest edges", "Disturbed areas"],
     medicinalUses: ["Kidney stones", "Liver support", "Antiviral (Hepatitis B)", "Diuretic"],
     traditionalUses: ["Kidney stones", "Gallstones", "Jaundice", "Urinary infections"],
@@ -555,7 +555,7 @@ export const plants: Record<string, Plant> = {
   "tea-tree": {
     id: "tea-tree", name: "Tea Tree", scientificName: "Melaleuca alternifolia",
     family: "Myrtaceae", emoji: "🌿", color: "#228B22",
-    description: "The Aboriginal wound healer — crushed leaves applied to infections for 40,000+ years.",
+    description: "The Aboriginal wound healer, crushed leaves applied to infections for 40,000+ years.",
     nativeTo: ["Australia"], habitats: ["Swampy coastal areas", "Queensland"],
     medicinalUses: ["Antimicrobial", "Antifungal", "Wound antiseptic", "Acne treatment"],
     traditionalUses: ["Wound poultice", "Respiratory inhalation", "Skin infections"],
@@ -568,20 +568,20 @@ export const plants: Record<string, Plant> = {
   "kakadu-plum": {
     id: "kakadu-plum", name: "Kakadu Plum", scientificName: "Terminalia ferdinandiana",
     family: "Combretaceae", emoji: "🍋", color: "#9ACD32",
-    description: "The world's richest source of Vitamin C — 100x more than oranges, harvested by Aboriginal rangers.",
+    description: "The world's richest source of Vitamin C, 100x more than oranges, harvested by Aboriginal rangers.",
     nativeTo: ["Australia"], habitats: ["Northern savanna", "Monsoon forests"],
     medicinalUses: ["Immune support", "Skin health", "Antioxidant", "Anti-inflammatory"],
     traditionalUses: ["Cold remedy", "Skin infections", "Nutrition", "Bush tucker"],
     partsUsed: ["Fruit"], tags: ["vitamin-c", "superfood", "aboriginal", "bush-tucker"],
     indigenousKnowledge: [
-      { practice: "Seasonal harvest", community: "Aboriginal rangers", region: "Kakadu", description: "Sustainable wild harvest during wet season — Traditional Ecological Knowledge guides timing", uses: ["Nutrition", "Trade", "Cultural practice"] },
+      { practice: "Seasonal harvest", community: "Aboriginal rangers", region: "Kakadu", description: "Sustainable wild harvest during wet season, Traditional Ecological Knowledge guides timing", uses: ["Nutrition", "Trade", "Cultural practice"] },
       { practice: "Bush medicine", community: "Yolŋu", region: "Arnhem Land", description: "Inner bark decoction for skin conditions and stomach upset", uses: ["Skin infections", "Digestive issues"] },
     ],
   },
   "eucalyptus": {
     id: "eucalyptus", name: "Eucalyptus", scientificName: "Eucalyptus globulus",
     family: "Myrtaceae", emoji: "🌳", color: "#2F4F4F",
-    description: "The fever tree — Aboriginal peoples used its leaves for everything from medicine to ceremony.",
+    description: "The fever tree, Aboriginal peoples used its leaves for everything from medicine to ceremony.",
     nativeTo: ["Australia"], habitats: ["Sclerophyll forests", "Woodlands"],
     medicinalUses: ["Decongestant", "Antimicrobial", "Anti-inflammatory", "Fever reducer"],
     traditionalUses: ["Fever treatment", "Coughs", "Wounds", "Pain relief"],
@@ -594,7 +594,7 @@ export const plants: Record<string, Plant> = {
   "kangaroo-apple": {
     id: "kangaroo-apple", name: "Kangaroo Apple", scientificName: "Solanum aviculare",
     family: "Solanaceae", emoji: "🍅", color: "#FF6347",
-    description: "A relative of the tomato — its fruit used cautiously by Aboriginal peoples for medicine.",
+    description: "A relative of the tomato, its fruit used cautiously by Aboriginal peoples for medicine.",
     nativeTo: ["Australia"], habitats: ["Open forests", "Coastal areas"],
     medicinalUses: ["Anti-inflammatory", "Hormonal support", "Skin conditions"],
     traditionalUses: ["Rheumatism", "Skin sores", "Hormonal disorders"],
@@ -606,7 +606,7 @@ export const plants: Record<string, Plant> = {
   "wattle": {
     id: "wattle", name: "Wattle", scientificName: "Acacia pycnantha",
     family: "Fabaceae", emoji: "🌼", color: "#FFD700",
-    description: "Australia's national flower — its seeds made into flour and its gum used as medicine for millennia.",
+    description: "Australia's national flower, its seeds made into flour and its gum used as medicine for millennia.",
     nativeTo: ["Australia"], habitats: ["Dry forests", "Woodlands", "Mallee"],
     medicinalUses: ["Soothing", "Antimicrobial", "Nutritive", "Skin healing"],
     traditionalUses: ["Cough syrup (gum)", "Seed bread", "Skin poultice"],
@@ -620,20 +620,20 @@ export const plants: Record<string, Plant> = {
   "argan": {
     id: "argan", name: "Argan", scientificName: "Argania spinosa",
     family: "Sapotaceae", emoji: "🌰", color: "#DAA520",
-    description: "The tree of life — goats climb its branches, and Berber women produce liquid gold from its nuts.",
+    description: "The tree of life, goats climb its branches, and Berber women produce liquid gold from its nuts.",
     nativeTo: ["Morocco"], habitats: ["Souss Valley", "Anti-Atlas Mountains"],
     medicinalUses: ["Skin regeneration", "Heart health", "Anti-inflammatory", "Antioxidant"],
     traditionalUses: ["Amlou (nut butter)", "Cosmetic oil", "Hair treatment", "Digestive tonic"],
     partsUsed: ["Nuts (oil)"], tags: ["argan-oil", "berber", "cosmetic", "souss"],
     indigenousKnowledge: [
-      { practice: "Traditional pressing", community: "Berber women's cooperatives", region: "Essaouira", description: "Hand-pressing nuts between stones — a UNESCO-recognized cultural practice", uses: ["Cooking oil", "Cosmetics", "Income"] },
+      { practice: "Traditional pressing", community: "Berber women's cooperatives", region: "Essaouira", description: "Hand-pressing nuts between stones, a UNESCO-recognized cultural practice", uses: ["Cooking oil", "Cosmetics", "Income"] },
       { practice: "Amlou preparation", community: "Berber families", region: "Anti-Atlas", description: "Argan oil blended with almonds and honey as a traditional spread", uses: ["Nutrition", "Energy", "Celebration"] },
     ],
   },
   "myrtle": {
     id: "myrtle", name: "Myrtle", scientificName: "Myrtus communis",
     family: "Myrtaceae", emoji: "🌿", color: "#2E8B57",
-    description: "Sacred in Moroccan Sufi tradition — branches used to sprinkle rose water during ceremonies.",
+    description: "Sacred in Moroccan Sufi tradition, branches used to sprinkle rose water during ceremonies.",
     nativeTo: ["Morocco", "Mediterranean"], habitats: ["Maquis scrub", "Oasis gardens"],
     medicinalUses: ["Antiseptic", "Astringent", "Respiratory support", "Skin toner"],
     traditionalUses: ["Hamam ritual", "Sufi ceremonies", "Wedding blessings", "Skin care"],
@@ -645,7 +645,7 @@ export const plants: Record<string, Plant> = {
   "artemisia": {
     id: "artemisia", name: "Artemisia", scientificName: "Artemisia herba-alba",
     family: "Asteraceae", emoji: "🌾", color: "#C0C0C0",
-    description: "Shih — the silvery wormwood used by Berber healers for digestive and spiritual ailments.",
+    description: "Shih, the silvery wormwood used by Berber healers for digestive and spiritual ailments.",
     nativeTo: ["Morocco", "Algeria"], habitats: ["Dry steppe", "Atlas Mountains"],
     medicinalUses: ["Antiparasitic", "Digestive stimulant", "Antimalarial", "Fever reducer"],
     traditionalUses: ["Tea for digestion", "Worm treatment", "Evil eye protection", "Fumigation"],
@@ -658,7 +658,7 @@ export const plants: Record<string, Plant> = {
   "nigella": {
     id: "nigella", name: "Nigella (Black Seed)", scientificName: "Nigella sativa",
     family: "Ranunculaceae", emoji: "🌑", color: "#2F2F2F",
-    description: "Habbat al-barakah — the 'blessed seed' praised by the Prophet Muhammad for healing all but death.",
+    description: "Habbat al-barakah, the 'blessed seed' praised by the Prophet Muhammad for healing all but death.",
     nativeTo: ["Morocco", "Egypt", "Middle East"], habitats: ["Cultivated fields", "Wild Mediterranean"],
     medicinalUses: ["Immune support", "Respiratory health", "Digestive aid", "Anti-inflammatory"],
     traditionalUses: ["Asthma", "Digestive complaints", "Skin conditions", "General tonic"],
@@ -671,7 +671,7 @@ export const plants: Record<string, Plant> = {
   "rose-morocco": {
     id: "rose-morocco", name: "Damask Rose", scientificName: "Rosa damascena",
     family: "Rosaceae", emoji: "🌹", color: "#FF1493",
-    description: "The Valley of Roses — where Berber women harvest damask roses at dawn for precious rose oil.",
+    description: "The Valley of Roses, where Berber women harvest damask roses at dawn for precious rose oil.",
     nativeTo: ["Morocco"], habitats: ["Dades Valley", "Cultivated terraces"],
     medicinalUses: ["Mood support", "Skin regeneration", "Hormone balance", "Digestive aid"],
     traditionalUses: ["Rose water", "Perfume", "Culinary", "Wedding ceremonies"],
@@ -685,20 +685,20 @@ export const plants: Record<string, Plant> = {
   "jamu": {
     id: "jamu", name: "Jamu Turmeric", scientificName: "Curcuma xanthorrhiza",
     family: "Zingiberaceae", emoji: "🟡", color: "#FFD700",
-    description: "The heart of Jamu — Indonesia's ancient herbal medicine system with royal court origins.",
+    description: "The heart of Jamu, Indonesia's ancient herbal medicine system with royal court origins.",
     nativeTo: ["Indonesia"], habitats: ["Java", "Bali", "Cultivated gardens"],
     medicinalUses: ["Liver support", "Anti-inflammatory", "Digestive aid", "Blood purifier"],
     traditionalUses: ["Daily wellness drink", "Postpartum recovery", "Beauty tonic", "Detox"],
     partsUsed: ["Rhizome"], tags: ["jamu", "java", "daily-wellness", "royal"],
     indigenousKnowledge: [
-      { practice: "Daily Jamu kunyit", community: "Javanese women", region: "Yogyakarta", description: "Fresh turmeric squeezed with tamarind and palm sugar — consumed every morning", uses: ["Skin health", "Immunity", "Postpartum recovery"] },
+      { practice: "Daily Jamu kunyit", community: "Javanese women", region: "Yogyakarta", description: "Fresh turmeric squeezed with tamarind and palm sugar, consumed every morning", uses: ["Skin health", "Immunity", "Postpartum recovery"] },
       { practice: "Palace herbal tradition", community: "Keraton healers", region: "Surakarta", description: "Elaborate recipes preserved from Javanese royal courts", uses: ["Beauty", "Longevity", "Royal health"] },
     ],
   },
   "galangal": {
     id: "galangal", name: "Galangal", scientificName: "Alpinia galanga",
     family: "Zingiberaceae", emoji: "🌿", color: "#F5F5DC",
-    description: "Lengkuas — the aromatic rhizome that perfumes Indonesian kitchens and apothecaries.",
+    description: "Lengkuas, the aromatic rhizome that perfumes Indonesian kitchens and apothecaries.",
     nativeTo: ["Indonesia", "Malaysia"], habitats: ["Tropical forests", "Home gardens"],
     medicinalUses: ["Digestive aid", "Antimicrobial", "Anti-inflammatory", "Aphrodisiac"],
     traditionalUses: ["Cooking spice", "Jamu ingredient", "Ritual offerings", "Fish preservation"],
@@ -710,7 +710,7 @@ export const plants: Record<string, Plant> = {
   "kencur": {
     id: "kencur", name: "Kencur", scientificName: "Kaempferia galanga",
     family: "Zingiberaceae", emoji: "🌱", color: "#DDA0DD",
-    description: "Aromatic ginger — its camphor-like scent is unmistakable in Indonesian medicine and cuisine.",
+    description: "Aromatic ginger, its camphor-like scent is unmistakable in Indonesian medicine and cuisine.",
     nativeTo: ["Indonesia", "Malaysia"], habitats: ["Shaded gardens", "Forest edges"],
     medicinalUses: ["Carminative", "Expectorant", "Anti-inflammatory", "Stomachic"],
     traditionalUses: ["Cough medicine", "Infant colic", "Mouth freshener", "Rheumatism"],
@@ -722,7 +722,7 @@ export const plants: Record<string, Plant> = {
   "temulawak": {
     id: "temulawak", name: "Temulawak", scientificName: "Curcuma zanthorrhiza",
     family: "Zingiberaceae", emoji: "🟨", color: "#DAA520",
-    description: "Java ginger — prized for liver protection and as a post-illness recovery tonic.",
+    description: "Java ginger, prized for liver protection and as a post-illness recovery tonic.",
     nativeTo: ["Indonesia"], habitats: ["Java", "Cultivated"],
     medicinalUses: ["Hepatoprotective", "Anti-inflammatory", "Choleretic", "Antioxidant"],
     traditionalUses: ["Liver tonic", "Post-illness recovery", "Appetite stimulant", "Jaundice"],
@@ -734,13 +734,13 @@ export const plants: Record<string, Plant> = {
   "gotu-kola": {
     id: "gotu-kola", name: "Gotu Kola", scientificName: "Centella asiatica",
     family: "Apiaceae", emoji: "🍃", color: "#3CB371",
-    description: "The 'herb of longevity' — Balinese drink it daily, and legends say elephants eat it for their long lives.",
+    description: "The 'herb of longevity', Balinese drink it daily, and legends say elephants eat it for their long lives.",
     nativeTo: ["Indonesia", "India", "Sri Lanka"], habitats: ["Wet fields", "Rice paddies", "Shady moist areas"],
     medicinalUses: ["Cognitive enhancer", "Wound healing", "Circulation", "Anti-aging"],
     traditionalUses: ["Brain tonic", "Skin healing", "Varicose veins", "Memory"],
     partsUsed: ["Leaves"], tags: ["longevity", "brain", "wound-healing", "balinese"],
     indigenousKnowledge: [
-      { practice: "Daily green juice", community: "Balinese", region: "Bali", description: "Fresh leaves blended with water and honey — consumed every morning", uses: ["Longevity", "Skin health", "Mental clarity"] },
+      { practice: "Daily green juice", community: "Balinese", region: "Bali", description: "Fresh leaves blended with water and honey, consumed every morning", uses: ["Longevity", "Skin health", "Mental clarity"] },
       { practice: "Traditional salve", community: "Balian healers", region: "Ubud", description: "Leaves pounded with coconut oil for wound and scar treatment", uses: ["Wounds", "Scars", "Skin regeneration"] },
     ],
   },
@@ -748,7 +748,7 @@ export const plants: Record<string, Plant> = {
   "maitake": {
     id: "maitake", name: "Maitake", scientificName: "Grifola frondosa",
     family: "Meripilaceae", emoji: "🍄", color: "#8B7355",
-    description: "The dancing mushroom — legend says Buddhist nuns danced with joy upon finding it.",
+    description: "The dancing mushroom, legend says Buddhist nuns danced with joy upon finding it.",
     nativeTo: ["Japan", "China"], habitats: ["Oak forests", "Base of trees"],
     medicinalUses: ["Immune modulation", "Blood sugar support", "Cancer adjunct", "Cholesterol"],
     traditionalUses: ["Longevity tonic", "Immune support", "General wellness"],
@@ -761,7 +761,7 @@ export const plants: Record<string, Plant> = {
   "shiso": {
     id: "shiso", name: "Shiso", scientificName: "Perilla frutescens",
     family: "Lamiaceae", emoji: "🌿", color: "#800080",
-    description: "The purple guardian — its leaves are used in everything from sushi to medicine to pickling plums.",
+    description: "The purple guardian, its leaves are used in everything from sushi to medicine to pickling plums.",
     nativeTo: ["Japan", "China", "Korea"], habitats: ["Cultivated gardens", "Disturbed areas"],
     medicinalUses: ["Anti-allergic", "Digestive aid", "Respiratory support", "Antimicrobial"],
     traditionalUses: ["Umeboshi wrapping", "Sushi garnish", "Cough remedy", "Pickling"],
@@ -773,33 +773,33 @@ export const plants: Record<string, Plant> = {
   "yuzu": {
     id: "yuzu", name: "Yuzu", scientificName: "Citrus junos",
     family: "Rutaceae", emoji: "🍋", color: "#FFD700",
-    description: "A fragrant citrus used in winter solstice baths — whole fruits floated in hot water for spiritual cleansing.",
+    description: "A fragrant citrus used in winter solstice baths, whole fruits floated in hot water for spiritual cleansing.",
     nativeTo: ["Japan", "Korea"], habitats: ["Mountain valleys", "Cultivated orchards"],
     medicinalUses: ["Mood lifting", "Circulation", "Antioxidant", "Respiratory support"],
     traditionalUses: ["Yuzu bath (yuzuyu)", "Ponzu sauce", "Marmalade", "Cold remedy"],
     partsUsed: ["Fruit peel", "Juice", "Seeds"], tags: ["citrus", "winter-solstice", "bath", "fragrance"],
     indigenousKnowledge: [
       { practice: "Yuzuyu bath", community: "Japanese families", region: "All Japan", description: "Whole yuzu fruits in hot bath on winter solstice for health and spiritual protection", uses: ["Circulation", "Skin health", "Winter ritual", "Spiritual protection"] },
-      { practice: "Yuzu kosho", community: "Kyushu cooks", region: "Kyushu", description: "Fermented paste of yuzu peel, chili, and salt — a traditional condiment", uses: ["Digestion", "Flavor", "Preservation"] },
+      { practice: "Yuzu kosho", community: "Kyushu cooks", region: "Kyushu", description: "Fermented paste of yuzu peel, chili, and salt, a traditional condiment", uses: ["Digestion", "Flavor", "Preservation"] },
     ],
   },
   "matcha": {
     id: "matcha", name: "Matcha", scientificName: "Camellia sinensis",
     family: "Theaceae", emoji: "🍵", color: "#228B22",
-    description: "Stone-ground green tea — the heart of Japanese tea ceremony, cultivated in shade for 20 days before harvest.",
+    description: "Stone-ground green tea, the heart of Japanese tea ceremony, cultivated in shade for 20 days before harvest.",
     nativeTo: ["Japan", "China"], habitats: ["Shaded tea gardens", "Uji region"],
     medicinalUses: ["Antioxidant", "Focus enhancement", "Metabolism support", "Calm alertness"],
     traditionalUses: ["Tea ceremony (chanoyu)", "Zen meditation", "Cooking", "Daily drink"],
     partsUsed: ["Powdered leaves"], tags: ["tea", "ceremony", "zen", "antioxidant"],
     indigenousKnowledge: [
-      { practice: "Tea ceremony", community: "Tea masters", region: "Uji/Kyoto", description: "Ritualized preparation and serving — each movement carries spiritual significance", uses: ["Meditation", "Hospitality", "Aesthetic practice", "Mindfulness"] },
+      { practice: "Tea ceremony", community: "Tea masters", region: "Uji/Kyoto", description: "Ritualized preparation and serving, each movement carries spiritual significance", uses: ["Meditation", "Hospitality", "Aesthetic practice", "Mindfulness"] },
       { practice: "Shade cultivation", community: "Tea farmers", region: "Uji", description: "Plants shaded for 20-30 days before harvest to increase L-theanine and chlorophyll", uses: ["Quality", "Flavor", "Ceremonial grade"] },
     ],
   },
   "hachimijiogan": {
     id: "hachimijiogan", name: "Rehmannia", scientificName: "Rehmannia glutinosa",
     family: "Orobanchaceae", emoji: "🌿", color: "#8B4513",
-    description: "A key herb in Kampo medicine — the 'eight-ingredient pill' is one of Japan's most prescribed formulas.",
+    description: "A key herb in Kampo medicine, the 'eight-ingredient pill' is one of Japan's most prescribed formulas.",
     nativeTo: ["Japan", "China"], habitats: ["Cultivated", "Mountain valleys"],
     medicinalUses: ["Kidney tonic", "Blood nourisher", "Fever reduction", "Anti-inflammatory"],
     traditionalUses: ["Hachimijiogan formula", "Diabetes support", "Kidney deficiency", "Fatigue"],
@@ -812,7 +812,7 @@ export const plants: Record<string, Plant> = {
   "rooibos": {
     id: "rooibos", name: "Rooibos", scientificName: "Aspalathus linearis",
     family: "Fabaceae", emoji: "🍂", color: "#CD853F",
-    description: "The red bush tea — a uniquely South African caffeine-free treasure discovered by the Khoisan.",
+    description: "The red bush tea, a uniquely South African caffeine-free treasure discovered by the Khoisan.",
     nativeTo: ["South Africa"], habitats: ["Cederberg Mountains", "Fynbos"],
     medicinalUses: ["Antioxidant", "Anti-inflammatory", "Digestive aid", "Allergy relief"],
     traditionalUses: ["Daily tea", "Digestive complaints", "Colic", "Skin conditions"],
@@ -825,7 +825,7 @@ export const plants: Record<string, Plant> = {
   "buchu": {
     id: "buchu", name: "Buchu", scientificName: "Agathosma betulina",
     family: "Rutaceae", emoji: "🌿", color: "#2E8B57",
-    description: "The Khoisan's secret — leaves with a minty-blackcurrant scent used for urinary and digestive health.",
+    description: "The Khoisan's secret, leaves with a minty-blackcurrant scent used for urinary and digestive health.",
     nativeTo: ["South Africa"], habitats: ["Cape fynbos", "Mountain slopes"],
     medicinalUses: ["Diuretic", "Urinary antiseptic", "Digestive aid", "Anti-inflammatory"],
     traditionalUses: ["Urinary infections", "Stomach complaints", "Rheumatism", "Wounds"],
@@ -838,7 +838,7 @@ export const plants: Record<string, Plant> = {
   "hoodia": {
     id: "hoodia", name: "Hoodia", scientificName: "Hoodia gordonii",
     family: "Apocynaceae", emoji: "🌵", color: "#8B7355",
-    description: "The hunger buster — San Bushmen have used this spiny succulent to suppress appetite on long hunts.",
+    description: "The hunger buster, San Bushmen have used this spiny succulent to suppress appetite on long hunts.",
     nativeTo: ["South Africa", "Namibia"], habitats: ["Kalahari desert", "Arid rocky areas"],
     medicinalUses: ["Appetite suppressant", "Thirst quencher", "Stomach ailments", "Diabetes"],
     traditionalUses: ["Hunting sustenance", "Thirst suppression", "Stomach pain", "Diabetes"],
@@ -850,7 +850,7 @@ export const plants: Record<string, Plant> = {
   "pelargonium": {
     id: "pelargonium", name: "Pelargonium sidoides", scientificName: "Pelargonium sidoides",
     family: "Geraniaceae", emoji: "🌸", color: "#DDA0DD",
-    description: "Umckaloabo — a South African geranium root that has become a global cold and flu remedy.",
+    description: "Umckaloabo, a South African geranium root that has become a global cold and flu remedy.",
     nativeTo: ["South Africa"], habitats: ["Grasslands", "Rocky outcrops"],
     medicinalUses: ["Respiratory infections", "Antibacterial", "Immune support", "Sinusitis"],
     traditionalUses: ["Tuberculosis", "Diarrhea", "Respiratory infections", "Wounds"],
@@ -862,7 +862,7 @@ export const plants: Record<string, Plant> = {
   "devils-claw": {
     id: "devils-claw", name: "Devil's Claw", scientificName: "Harpagophytum procumbens",
     family: "Pedaliaceae", emoji: "🪝", color: "#8B6914",
-    description: "Named for its vicious claw-like fruit — its tubers are a powerful anti-inflammatory used by the San.",
+    description: "Named for its vicious claw-like fruit, its tubers are a powerful anti-inflammatory used by the San.",
     nativeTo: ["South Africa", "Namibia"], habitats: ["Kalahari", "Arid grasslands"],
     medicinalUses: ["Anti-inflammatory", "Arthritis relief", "Digestive aid", "Pain relief"],
     traditionalUses: ["Arthritis", "Rheumatism", "Stomach pain", "Fever", "Skin conditions"],
@@ -876,20 +876,20 @@ export const plants: Record<string, Plant> = {
   "soursop": {
     id: "soursop", name: "Soursop", scientificName: "Annona muricata",
     family: "Annonaceae", emoji: "🍈", color: "#32CD32",
-    description: "The prickly green fruit with creamy white flesh — leaves brewed for calming tea.",
+    description: "The prickly green fruit with creamy white flesh, leaves brewed for calming tea.",
     nativeTo: ["Jamaica", "Caribbean", "Central America"], habitats: ["Tropical lowlands", "Home gardens"],
     medicinalUses: ["Sedative", "Antispasmodic", "Antimicrobial", "Potential anticancer"],
     traditionalUses: ["Insomnia tea", "Nervous conditions", "Parasites", "Hypertension"],
     partsUsed: ["Leaves", "Fruit", "Bark", "Seeds"], tags: ["sedative", "caribbean", "fruit", "tea"],
     indigenousKnowledge: [
       { practice: "Leaf tea", community: "Maroon healers", region: "Blue Mountains", description: "Leaves dried and steeped for insomnia and nervous tension", uses: ["Sleep", "Anxiety", "Hypertension"] },
-      { practice: "Fruit harvesting", community: "Rural communities", region: "All Jamaica", description: "Fruit picked when slightly soft — eaten fresh or blended into juice", uses: ["Nutrition", "Cooling drink", "Income"] },
+      { practice: "Fruit harvesting", community: "Rural communities", region: "All Jamaica", description: "Fruit picked when slightly soft, eaten fresh or blended into juice", uses: ["Nutrition", "Cooling drink", "Income"] },
     ],
   },
   "cerasee": {
     id: "cerasee", name: "Cerasee", scientificName: "Momordica charantia",
     family: "Cucurbitaceae", emoji: "🌿", color: "#556B2F",
-    description: "Bitter melon — the weekly blood cleanser drunk by Jamaicans every Saturday morning.",
+    description: "Bitter melon, the weekly blood cleanser drunk by Jamaicans every Saturday morning.",
     nativeTo: ["Jamaica", "Caribbean", "Africa", "Asia"], habitats: ["Fencerows", "Wastelands", "Gardens"],
     medicinalUses: ["Blood sugar control", "Blood cleanser", "Antiparasitic", "Digestive stimulant"],
     traditionalUses: ["Weekly cleanse", "Diabetes", "Worms", "Skin conditions"],
@@ -902,7 +902,7 @@ export const plants: Record<string, Plant> = {
   "guinea-hen": {
     id: "guinea-hen", name: "Guinea Hen Weed", scientificName: "Petiveria alliacea",
     family: "Phytolaccaceae", emoji: "🌿", color: "#2F4F4F",
-    description: "Strong-back — a pungent herb believed to strengthen the back and treat numerous ailments.",
+    description: "Strong-back, a pungent herb believed to strengthen the back and treat numerous ailments.",
     nativeTo: ["Jamaica", "Caribbean", "Central America"], habitats: ["Roadsides", "Disturbed areas", "Gardens"],
     medicinalUses: ["Pain relief", "Anti-inflammatory", "Antimicrobial", "Immune support"],
     traditionalUses: ["Back pain", "Arthritis", "Colds", "Cancer folk remedy"],
@@ -914,7 +914,7 @@ export const plants: Record<string, Plant> = {
   "strong-back": {
     id: "strong-back", name: "Strong Back", scientificName: "Desmodium incanum",
     family: "Fabaceae", emoji: "🌿", color: "#6B8E23",
-    description: "The namesake herb — Jamaican men swear by this for back pain and male vitality.",
+    description: "The namesake herb, Jamaican men swear by this for back pain and male vitality.",
     nativeTo: ["Jamaica", "Caribbean"], habitats: ["Open fields", "Roadsides"],
     medicinalUses: ["Back pain relief", "Anti-inflammatory", "Diuretic", "Male tonic"],
     traditionalUses: ["Back pain", "Rheumatism", "Urinary complaints", "Vitality"],
@@ -926,7 +926,7 @@ export const plants: Record<string, Plant> = {
   "leaf-of-life": {
     id: "leaf-of-life", name: "Leaf of Life", scientificName: "Kalanchoe pinnata",
     family: "Crassulaceae", emoji: "🌿", color: "#228B22",
-    description: "Miracle leaf — its leaves grow baby plants on their edges, and it heals cuts and coughs.",
+    description: "Miracle leaf, its leaves grow baby plants on their edges, and it heals cuts and coughs.",
     nativeTo: ["Jamaica", "Caribbean", "Madagascar"], habitats: ["Rocky areas", "Gardens", "Walls"],
     medicinalUses: ["Wound healing", "Anti-inflammatory", "Antimicrobial", "Cough suppressant"],
     traditionalUses: ["Cuts and bruises", "Coughs", "Asthma", "Ear infections", "Kidney stones"],

@@ -56,8 +56,9 @@ export default function HomeHealing() {
         </h2>
         <div className="mt-6 flex items-end justify-between flex-wrap gap-4">
           <p className="max-w-2xl text-lg text-[color:var(--ink-soft)] leading-relaxed">
-            Plants the world leans on — turmeric, ginseng, ayahuasca's cousins. Each name is a formula
-            held somewhere by someone, long before any laboratory. Tap a face to meet its keeper.
+            Turmeric. Ginseng. Ayahuasca's cousins. The plants the world leans on. Every one is
+            a formula someone kept, long before any laboratory wrote it down. Tap a face to meet
+            its keeper.
           </p>
           <Link href="/explore" className="m3-outline">
             <MaterialIcon name="library_books" style={{ fontSize: 20 }} />
