@@ -1,26 +1,253 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ---------------------------------------------------------------------------
+   Plant Atlas — Material 3 Expressive
+   Palette drawn from Amazonian pigment tradition:
+   urucum (red), jenipapo (blue-black), açaí purple, ochre clay, canopy green
+   Light cream base, high-contrast tonal blocks, real shape vocabulary.
+   --------------------------------------------------------------------------- */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bone);
+  --color-foreground: var(--ink);
+
+  --color-bone: #f6efe0;
+  --color-canvas: #ede4cd;
+  --color-ink: #1a2d1f;
+  --color-ink-soft: #4a5e4f;
+  --color-ink-muted: #7a8a7f;
+
+  --color-urucum: #dc4a26;
+  --color-urucum-container: #fbdfd4;
+  --color-ochre: #e8a83c;
+  --color-ochre-container: #f8e2b0;
+  --color-sage: #8aa876;
+  --color-sage-container: #c9dbb4;
+  --color-forest: #1f3a2a;
+  --color-forest-container: #cfe0d0;
+  --color-acai: #5a2a52;
+  --color-acai-container: #dcc0d4;
+  --color-sky: #6fa3b5;
+  --color-sky-container: #cfe1e8;
+  --color-sun: #ffd166;
+  --color-jenipapo: #1a2432;
+  --color-shell: #ffffff;
+
+  --font-display: var(--font-display), ui-serif, Georgia, serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Base tokens */
+  --bone: #f6efe0;
+  --canvas: #ede4cd;
+  --ink: #1a2d1f;
+  --ink-soft: #4a5e4f;
+  --ink-muted: #7a8a7f;
+
+  /* Tonal pairs — each pigment has a strong & a container/soft */
+  --urucum: #dc4a26;
+  --urucum-container: #fbdfd4;
+  --ochre: #e8a83c;
+  --ochre-container: #f8e2b0;
+  --sage: #8aa876;
+  --sage-container: #c9dbb4;
+  --forest: #1f3a2a;
+  --forest-container: #cfe0d0;
+  --acai: #5a2a52;
+  --acai-container: #dcc0d4;
+  --sky: #6fa3b5;
+  --sky-container: #cfe1e8;
+  --sun: #ffd166;
+  --jenipapo: #1a2432;
+  --shell: #ffffff;
+
+  color-scheme: light;
+}
+
+html, body {
+  background: var(--bone);
+  color: var(--ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Material Symbols — Expressive rounded */
+.material-symbols {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal; font-style: normal; font-size: 1em; line-height: 1;
+  letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr;
+  font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.material-symbols.filled { font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24; }
+
+/* Display helpers */
+.font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.025em; }
+.font-ui { font-family: var(--font-sans); }
+.tracking-brand { letter-spacing: -0.035em; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--canvas); }
+::-webkit-scrollbar-thumb { background: var(--forest); border-radius: 999px; border: 2px solid var(--canvas); }
+::-webkit-scrollbar-thumb:hover { background: var(--urucum); }
+::selection { background: var(--urucum); color: var(--bone); }
+
+/* ---------- MATERIAL EXPRESSIVE SHAPE VOCABULARY ---------- */
+/* Squircle — Google's signature superellipse */
+.shape-squircle { border-radius: 42% / 36%; }
+
+/* Rounded squircle — more rectangular */
+.shape-soft {
+  clip-path: path("M 48,0 L 352,0 Q 400,0 400,48 L 400,352 Q 400,400 352,400 L 48,400 Q 0,400 0,352 L 0,48 Q 0,0 48,0 Z");
+}
+
+/* Cookie — 12-lobed wavy flower */
+.shape-cookie { clip-path: url(#clipCookie); }
+/* Clover — 4 lobes */
+.shape-clover { clip-path: url(#clipClover); }
+/* Pentagon — rounded 5-sided */
+.shape-pentagon { clip-path: url(#clipPentagon); }
+/* Diamond — rotated rounded square */
+.shape-diamond { clip-path: url(#clipDiamond); }
+/* Blob — organic */
+.shape-blob { clip-path: url(#clipBlob); }
+
+/* Tile — the Material Expressive card: flat color, chunky corners, no shadow */
+.tile { border-radius: 32px; overflow: hidden; }
+.tile-lg { border-radius: 48px; overflow: hidden; }
+.tile-xl { border-radius: 64px; overflow: hidden; }
+
+/* ---------- BUTTONS — Material Expressive ---------- */
+/* Filled button — pill, chunky */
+.m3-filled {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 1.05rem 1.8rem;
+  border-radius: 999px;
+  background: var(--urucum);
+  color: var(--bone);
+  font-weight: 600; font-size: 0.95rem;
+  letter-spacing: -0.005em;
+  border: 0; cursor: pointer;
+  transition: transform 180ms cubic-bezier(0.2,0,0,1), background 180ms, border-radius 240ms;
+}
+.m3-filled:hover { background: #b23a1d; border-radius: 22px; transform: translateY(-1px); }
+.m3-filled:active { transform: translateY(0); border-radius: 999px; }
+
+.m3-tonal {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 1.05rem 1.8rem;
+  border-radius: 999px;
+  background: var(--forest);
+  color: var(--bone);
+  font-weight: 600; font-size: 0.95rem;
+  border: 0; cursor: pointer;
+  transition: transform 180ms, background 180ms, border-radius 240ms;
+}
+.m3-tonal:hover { background: #0e2416; border-radius: 22px; transform: translateY(-1px); }
+
+.m3-outline {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 1rem 1.7rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 600; font-size: 0.95rem;
+  border: 2px solid var(--ink);
+  transition: background 180ms, color 180ms, border-radius 240ms;
+}
+.m3-outline:hover { background: var(--ink); color: var(--bone); border-radius: 22px; }
+
+.m3-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  color: var(--ink);
+  font-weight: 500; font-size: 0.9rem;
+  transition: background 150ms;
+}
+.m3-ghost:hover { background: rgba(26,45,31,0.08); }
+
+/* ---------- CHIP ---------- */
+.chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--canvas);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border: 1.5px solid transparent;
+  transition: background 150ms, border-color 150ms;
+}
+.chip-outline { background: transparent; border-color: var(--ink); color: var(--ink); }
+.chip-filled { background: var(--urucum); color: var(--bone); border-color: transparent; }
+.chip-forest { background: var(--forest); color: var(--bone); border-color: transparent; }
+.chip-ochre { background: var(--ochre); color: var(--ink); border-color: transparent; }
+.chip-sage { background: var(--sage); color: var(--ink); border-color: transparent; }
+.chip-acai { background: var(--acai); color: var(--bone); border-color: transparent; }
+
+/* ---------- BACKDROPS ---------- */
+.bg-grid-ink {
+  background-image:
+    radial-gradient(circle, rgba(26,45,31,0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.bg-grid-bone {
+  background-image:
+    radial-gradient(circle, rgba(246,239,224,0.3) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Hero photo slot — drop /hero-aerial.jpg (your Midjourney) and it appears */
+.hero-image-slot {
+  background-color: var(--sage-container);
+  background-image: var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Marquee */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 60s linear infinite; display: inline-flex; }
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* Reveal on scroll (CSS scroll-driven) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Sticker — decorative shape overlay */
+.sticker-shadow { filter: drop-shadow(0 8px 24px rgba(26,45,31,0.18)); }
+
+/* Headline counter display for massive numbers */
+.num-huge {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(5rem, 14vw, 14rem);
+  line-height: 0.85;
+  letter-spacing: -0.06em;
 }

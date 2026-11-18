@@ -16,9 +16,13 @@
 # next.js
 /.next/
 /out/
+/dist/
 
 # production
 /build
+
+# local agent / editor
+.claude/
 
 # misc
 .DS_Store
