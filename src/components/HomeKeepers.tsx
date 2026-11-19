@@ -2,6 +2,7 @@ import Link from "next/link";
 import MaterialIcon from "./MaterialIcon";
 import { countries } from "@/lib/plant-data";
 import CountryLandscape from "./CountryLandscape";
+import { asset } from "@/lib/asset";
 
 const SHAPES = [
   { shape: "url(#clipCookie)", color: "var(--urucum)" },
@@ -70,7 +71,7 @@ export default function HomeKeepers() {
               <div
                 className="absolute inset-0"
                 style={{
-                  backgroundImage: `url('/countries/${c.code}.jpg')`,
+                  backgroundImage: `url('${asset(`/countries/${c.code}.jpg`)}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

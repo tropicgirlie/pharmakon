@@ -4,6 +4,7 @@ import Link from "next/link";
 import MaterialIcon from "./MaterialIcon";
 import CountryLandscape from "./CountryLandscape";
 import type { Country } from "@/lib/plant-data";
+import { asset } from "@/lib/asset";
 
 const SHAPES = [
   { shape: "url(#clipCookie)", color: "var(--urucum)" },
@@ -28,7 +29,7 @@ export default function CountryShelf({ country, index }: { country: Country; ind
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url('/countries/${country.code}.jpg')`,
+          backgroundImage: `url('${asset(`/countries/${country.code}.jpg`)}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

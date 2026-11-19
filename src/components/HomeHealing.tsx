@@ -1,6 +1,7 @@
 import Link from "next/link";
 import MaterialIcon from "./MaterialIcon";
 import { getPlantById, type Plant } from "@/lib/plant-data";
+import { asset } from "@/lib/asset";
 
 /** Famous plants with real photographs downloaded into /public/plants/. */
 const FAMOUS: Array<{ id: string; use: string; keeper: string }> = [
@@ -99,7 +100,7 @@ function PlantPhotoCard({
       <div
         className="absolute inset-0 transition-transform duration-[1200ms] group-hover:scale-[1.04]"
         style={{
-          backgroundImage: `url('/plants/${plant.id}.jpg')`,
+          backgroundImage: `url('${asset(`/plants/${plant.id}.jpg`)}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
