@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import MaterialIcon from "./MaterialIcon";
+import { asset } from "@/lib/asset";
 
 export default function HomeHero({ totalPlants, totalCountries }: { totalPlants: number; totalCountries: number }) {
   return (
@@ -161,48 +162,36 @@ function HeroImageSlot() {
   return (
     <div
       className="hero-image-slot tile-xl w-full aspect-[4/5] relative overflow-hidden"
-      style={
-        {
-          background:
-            "var(--hero-image, linear-gradient(140deg, #4a6b4a 0%, #1f3a2a 55%, #0f2419 100%))",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }
-      }
+      style={{ background: "#0f2419" }}
     >
-      {/* Default canopy illustration if no photo is present */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-80"
-        viewBox="0 0 400 500"
-        preserveAspectRatio="xMidYMid slice"
+      {/* Live canopy loop. Muted + playsInline so it autoplays on mobile. */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={asset("/jungle-poster.jpg")}
+        className="absolute inset-0 w-full h-full object-cover"
         aria-hidden
       >
-        <defs>
-          <radialGradient id="heroMist" cx="50%" cy="30%" r="80%">
-            <stop offset="0%" stopColor="#f6efe0" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#f6efe0" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        <rect width="400" height="500" fill="url(#heroMist)" />
-        {/* scattered tree ellipses evoking an aerial canopy */}
-        {Array.from({ length: 80 }).map((_, i) => {
-          const seed = i * 97;
-          const x = (seed * 13) % 400;
-          const y = (seed * 29) % 500;
-          const r1 = 14 + ((seed * 7) % 20);
-          const r2 = 10 + ((seed * 3) % 14);
-          const op = 0.35 + ((seed * 11) % 10) / 20;
-          return <ellipse key={i} cx={x} cy={y} rx={r1} ry={r2} fill="#2a4a36" opacity={op} />;
-        })}
-      </svg>
+        <source src={asset("/jungle-canopy.webm")} type="video/webm" />
+        <source src={asset("/jungle-canopy.mp4")} type="video/mp4" />
+      </video>
 
-      {/* Hint label — tells the user where to drop their photo */}
-      <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-[color:var(--ink)]/70 to-transparent">
-        <div className="text-[color:var(--bone)] text-xs uppercase tracking-[0.24em] opacity-80">
+      {/* Darkening wash bottom-up so the label reads cleanly. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(5,15,10,0.15) 0%, rgba(5,15,10,0.05) 40%, rgba(5,15,10,0.85) 100%)",
+        }}
+        aria-hidden
+      />
+
+      <div className="absolute inset-x-0 bottom-0 p-5">
+        <div className="flex items-center gap-2 text-[color:var(--bone)] text-xs uppercase tracking-[0.24em]">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[color:var(--urucum)] animate-pulse" />
           Aerial · Amazonia
-        </div>
-        <div className="text-[color:var(--bone)]/80 text-[10px] mt-1">
-          drop /public/hero-aerial.jpg to replace
         </div>
       </div>
     </div>
