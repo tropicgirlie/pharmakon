@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Shapes from "@/components/Shapes";
+import ThresholdGate from "@/components/ThresholdGate";
 
 const display = Fraunces({
   variable: "--font-display",
@@ -36,6 +37,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-[color:var(--bone)] text-[color:var(--ink)]">
         <Shapes />
+        <ThresholdGate />
         {children}
       </body>
     </html>
