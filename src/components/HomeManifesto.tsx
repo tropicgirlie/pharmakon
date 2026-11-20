@@ -92,7 +92,7 @@ export default function HomeManifesto() {
           <article
             key={b.num}
             className="tile-lg p-10 md:p-12 relative overflow-hidden reveal min-h-[420px] flex flex-col justify-between"
-            style={{ background: b.bg, color: b.text }}
+            style={{ background: b.bg, color: b.text, "--i": i } as React.CSSProperties}
           >
             {/* Floating decorative shape */}
             <div

@@ -32,13 +32,13 @@ export default function HomeKeepers() {
   return (
     <section className="relative py-24 lg:py-32 bg-[color:var(--bone)]">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 mb-16">
-        <span className="chip chip-outline">
+        <span className="chip chip-outline reveal">
           <MaterialIcon name="public" style={{ fontSize: 14 }} />
           The Keepers
         </span>
         <h2
-          className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92]"
-          style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)" }}
+          className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92] reveal"
+          style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)", "--i": 1 } as React.CSSProperties}
         >
           Twelve lands, <span className="italic text-[color:var(--urucum)]">countless lineages.</span>
         </h2>
@@ -58,11 +58,13 @@ export default function HomeKeepers() {
         {countries.map((c, i) => {
           const s = SHAPES[i % SHAPES.length];
           const note = KEEPER_NOTES[c.code] || "Local keepers";
+          const staggerI = Math.min(i, 8);
           return (
             <Link
               key={c.code}
               href={`/country/${c.code}`}
-              className="tile relative overflow-hidden group transition-transform duration-300 hover:-translate-y-1 min-h-[380px] flex flex-col justify-between"
+              className="tile reveal relative overflow-hidden group transition-transform duration-300 hover:-translate-y-1 min-h-[380px] flex flex-col justify-between"
+              style={{ "--i": staggerI } as React.CSSProperties}
             >
               {/* Layer 0 — painted landscape fallback */}
               <CountryLandscape code={c.code} className="absolute inset-0 w-full h-full" />

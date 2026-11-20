@@ -17,10 +17,12 @@ const SHAPES = [
 
 export default function CountryShelf({ country, index }: { country: Country; index: number }) {
   const s = SHAPES[index % SHAPES.length];
+  const i = Math.min(index, 8);
   return (
     <Link
       href={`/country/${country.code}`}
-      className="tile relative overflow-hidden group transition-transform duration-300 hover:-translate-y-1 min-h-[360px] flex flex-col justify-between"
+      className="tile reveal relative overflow-hidden group transition-transform duration-300 hover:-translate-y-1 min-h-[360px] flex flex-col justify-between"
+      style={{ "--i": i } as React.CSSProperties}
     >
       {/* Layer 0 — painted landscape fallback */}
       <CountryLandscape code={country.code} className="absolute inset-0 w-full h-full" />

@@ -45,13 +45,13 @@ export default function HomeHealing() {
   return (
     <section id="famous" className="relative py-24 lg:py-32 bg-[color:var(--bone)]">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 mb-14">
-        <span className="chip chip-outline">
+        <span className="chip chip-outline reveal">
           <MaterialIcon name="healing" style={{ fontSize: 14 }} />
           The Pharmacy
         </span>
         <h2
-          className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92] max-w-5xl"
-          style={{ fontSize: "clamp(2.8rem, 8vw, 7rem)" }}
+          className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92] max-w-5xl reveal"
+          style={{ fontSize: "clamp(2.8rem, 8vw, 7rem)", "--i": 1 } as React.CSSProperties}
         >
           The <span className="italic text-[color:var(--urucum)]">famous</span> ones.
         </h2>
@@ -70,7 +70,7 @@ export default function HomeHealing() {
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {items.map((it, i) => (
-          <PlantPhotoCard key={it.id} plant={it.plant} use={it.use} keeper={it.keeper} featured={i === 0} />
+          <PlantPhotoCard key={it.id} plant={it.plant} use={it.use} keeper={it.keeper} featured={i === 0} index={i} />
         ))}
       </div>
     </section>
@@ -82,19 +82,23 @@ function PlantPhotoCard({
   use,
   keeper,
   featured,
+  index,
 }: {
   plant: Plant;
   use: string;
   keeper: string;
   featured?: boolean;
+  index: number;
 }) {
+  // Stagger caps at 10 so the 30th card doesn't lag 1.2s behind the first.
+  const i = Math.min(index, 10);
   return (
     <Link
       href={`/plant/${plant.id}`}
-      className={`tile-lg relative overflow-hidden group transition-transform duration-500 hover:-translate-y-1 ${
+      className={`tile-lg reveal relative overflow-hidden group transition-transform duration-500 hover:-translate-y-1 ${
         featured ? "sm:col-span-2 lg:col-span-1 min-h-[480px]" : "min-h-[400px]"
       } flex flex-col justify-end`}
-      style={{ background: plant.color }}
+      style={{ background: plant.color, "--i": i } as React.CSSProperties}
     >
       {/* Layer 1: real photo */}
       <div

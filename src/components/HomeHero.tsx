@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import MaterialIcon from "./MaterialIcon";
 import { asset } from "@/lib/asset";
 
@@ -58,10 +59,11 @@ export default function HomeHero({ totalPlants, totalCountries }: { totalPlants:
               </Link>
             </div>
 
-            {/* Stat row — chunky expressive */}
+            {/* Stat row — chunky expressive. Numeric values count up when the
+                row crosses the viewport; ∞ and 0 stay static. */}
             <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <HeroStat value={String(totalPlants).padStart(2, "0")} label="plants" tone="ochre" />
-              <HeroStat value={String(totalCountries).padStart(2, "0")} label="lands" tone="sage" />
+              <HeroStat count={totalPlants} label="plants" tone="ochre" />
+              <HeroStat count={totalCountries} label="lands" tone="sage" />
               <HeroStat value="∞" label="lineages" tone="acai" />
               <HeroStat value="0" label="biopiracy" tone="urucum" />
             </div>
@@ -143,7 +145,17 @@ function Dot() {
   );
 }
 
-function HeroStat({ value, label, tone }: { value: string; label: string; tone: "ochre" | "sage" | "acai" | "urucum" }) {
+function HeroStat({
+  value,
+  count,
+  label,
+  tone,
+}: {
+  value?: string;
+  count?: number;
+  label: string;
+  tone: "ochre" | "sage" | "acai" | "urucum";
+}) {
   const map = {
     ochre: { bg: "var(--ochre)", text: "var(--ink)" },
     sage: { bg: "var(--sage)", text: "var(--ink)" },
@@ -152,10 +164,54 @@ function HeroStat({ value, label, tone }: { value: string; label: string; tone: 
   }[tone];
   return (
     <div className="tile p-5" style={{ background: map.bg, color: map.text }}>
-      <div className="font-display text-5xl tracking-brand leading-none" style={{ color: map.text }}>{value}</div>
+      <div className="font-display text-5xl tracking-brand leading-none" style={{ color: map.text }}>
+        {count !== undefined ? <CountUp target={count} /> : value}
+      </div>
       <div className="mt-2 text-xs uppercase tracking-[0.2em]" style={{ color: map.text, opacity: 0.8 }}>{label}</div>
     </div>
   );
+}
+
+/**
+ * Counts from 0 to `target` with ease-out over `duration` ms, triggered once
+ * when the element enters the viewport. Pads to two digits to match the rest
+ * of the stat row ("60", "12"). Respects prefers-reduced-motion.
+ */
+function CountUp({ target, duration = 900 }: { target: number; duration?: number }) {
+  const [current, setCurrent] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurrent(target);
+      return;
+    }
+    const io = new IntersectionObserver(
+      entries => {
+        for (const e of entries) {
+          if (!e.isIntersecting || started.current) continue;
+          started.current = true;
+          const start = performance.now();
+          const tick = (now: number) => {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            setCurrent(Math.round(eased * target));
+            if (t < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+          io.unobserve(e.target);
+        }
+      },
+      { rootMargin: "0px 0px -15% 0px", threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [target, duration]);
+
+  return <span ref={ref}>{String(current).padStart(2, "0")}</span>;
 }
 
 function HeroImageSlot() {

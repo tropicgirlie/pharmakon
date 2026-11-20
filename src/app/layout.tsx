@@ -3,6 +3,7 @@ import { Fraunces, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Shapes from "@/components/Shapes";
 import ThresholdGate from "@/components/ThresholdGate";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const display = Fraunces({
   variable: "--font-display",
@@ -38,7 +39,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${display.variable} ${sans.variable} antialiased`}
+      data-js="on"
+    >
       <head>
         <link
           rel="stylesheet"
@@ -48,6 +53,7 @@ export default function RootLayout({
       <body className="min-h-dvh bg-[color:var(--bone)] text-[color:var(--ink)]">
         <Shapes />
         <ThresholdGate />
+        <ScrollReveal />
         {children}
       </body>
     </html>

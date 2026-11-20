@@ -256,16 +256,22 @@ button,
 }
 .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
 
-/* Reveal on scroll (CSS scroll-driven) */
+/* Reveal on scroll. Driven by IntersectionObserver (see ScrollReveal.tsx),
+   not scroll-timeline, so Safari and Firefox behave the same as Chromium.
+   The data-js guard keeps cards visible when JS is off or still loading —
+   a <script> in layout.tsx flips it on before React hydration. */
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
-    animation: reveal 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+  [data-js="on"] .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: calc(var(--i, 0) * 40ms);
   }
-  @keyframes reveal {
-    from { opacity: 0; transform: translateY(32px); }
-    to { opacity: 1; transform: translateY(0); }
+  [data-js="on"] .reveal[data-reveal-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

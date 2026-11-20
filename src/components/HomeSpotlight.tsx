@@ -68,13 +68,13 @@ export default function HomeSpotlight() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
           <div>
-            <span className="chip chip-outline">
+            <span className="chip chip-outline reveal">
               <MaterialIcon name="eco" style={{ fontSize: 14 }} />
               Spotlight
             </span>
             <h2
-              className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92]"
-              style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)" }}
+              className="mt-6 font-display tracking-brand text-[color:var(--ink)] leading-[0.92] reveal"
+              style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)", "--i": 1 } as React.CSSProperties}
             >
               Five plants, <span className="italic text-[color:var(--urucum)]">many languages.</span>
             </h2>
@@ -133,8 +133,8 @@ function SpotlightCard({
   return (
     <Link
       href={`/plant/${plant.id}`}
-      className={`tile-lg relative overflow-hidden p-8 md:p-10 flex flex-col justify-between group transition-transform duration-500 hover:-translate-y-1 ${span}`}
-      style={{ background: item.bg, color: item.text }}
+      className={`tile-lg reveal relative overflow-hidden p-8 md:p-10 flex flex-col justify-between group transition-transform duration-500 hover:-translate-y-1 ${span}`}
+      style={{ background: item.bg, color: item.text, "--i": index } as React.CSSProperties}
     >
       {/* Decorative shape sticker */}
       <div
