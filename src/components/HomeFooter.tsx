@@ -43,7 +43,10 @@ export default function HomeFooter() {
         </div>
       </div>
 
-      <div className="border-t border-[color:var(--bone)]/15">
+      <div
+        className="border-t border-[color:var(--bone)]/15"
+        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      >
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-8 flex flex-wrap items-center justify-between gap-4 text-xs text-[color:var(--bone)]/70">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-xl bg-[color:var(--urucum)] flex items-center justify-center">

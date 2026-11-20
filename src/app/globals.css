@@ -70,11 +70,25 @@ html, body {
   color: var(--ink);
 }
 
+/* Mobile-native base layer. Each rule has a why; apply where the why holds.
+   Reference: Emil Kowalski, mobile-native skill. */
+html {
+  /* Kill the translucent gray tap flash on iOS Safari / Android Chrome. The
+     single loudest "this is a website" tell on a phone. */
+  -webkit-tap-highlight-color: transparent;
+  /* Stop pull-to-refresh from hijacking the gate / modal scroll and bouncing
+     the whole page into its chrome. */
+  overscroll-behavior: none;
+}
+
 body {
   font-family: var(--font-sans);
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* 100dvh respects the dynamic mobile chrome (address bar collapse),
+     where 100vh overshoots and creates a hidden scroll strip. */
+  min-height: 100dvh;
 }
 
 /* Material Symbols — Expressive rounded */
@@ -125,6 +139,21 @@ body {
 .tile { border-radius: 32px; overflow: hidden; }
 .tile-lg { border-radius: 48px; overflow: hidden; }
 .tile-xl { border-radius: 64px; overflow: hidden; }
+
+/* Interactive surfaces. touch-action: manipulation drops the 300ms double-tap
+   zoom delay on taps. user-select: none stops long-press from lifting a text
+   selection out of a button label. Applied to every pressable surface, never
+   to body copy (where it would be a defect). */
+.m3-filled,
+.m3-outline,
+.m3-ghost,
+.chip,
+button,
+[role="button"] {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 /* ---------- BUTTONS — Material Expressive ---------- */
 /* Filled button — pill, chunky */

@@ -27,6 +27,7 @@ export default function GardenNav({ variant = "solid" }: { variant?: Variant }) 
         backdropFilter: isGlass ? "blur(0)" : "blur(20px) saturate(140%)",
         WebkitBackdropFilter: isGlass ? "blur(0)" : "blur(20px) saturate(140%)",
         borderBottom: isGlass ? "1px solid transparent" : "1px solid rgba(26,45,31,0.08)",
+        paddingTop: "env(safe-area-inset-top)",
       }}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 lg:px-10">

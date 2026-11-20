@@ -23,6 +23,8 @@
 
 # local agent / editor
 .claude/
+.agents/
+skills-lock.json
 
 # misc
 .DS_Store
