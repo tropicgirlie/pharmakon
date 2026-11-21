@@ -3,26 +3,27 @@
 import { useEffect, useState } from "react";
 import { asset } from "@/lib/asset";
 
-type State = "loading" | "open" | "closing" | "closed";
+type State = "open" | "closing" | "closed";
 
 // cubic-bezier(0.32, 0.72, 0, 1) is Vaul's "drawer" curve — settled start,
 // long tail. Reads as the canopy lifting away rather than a cross-fade.
 const EASE_DRAWER = "cubic-bezier(0.32, 0.72, 0, 1)";
 
 export default function ThresholdGate() {
-  const [state, setState] = useState<State>("loading");
+  // Default to "open" so the gate renders on the server and is in the DOM
+  // from the first paint — otherwise the homepage flashes through before
+  // the client-only sessionStorage check could decide anything.
+  const [state, setState] = useState<State>("open");
 
   useEffect(() => {
     try {
       if (sessionStorage.getItem("pharmakon_entered") === "1") {
         setState("closed");
-        return;
       }
     } catch {}
-    setState("open");
   }, []);
 
-  if (state === "loading" || state === "closed") return null;
+  if (state === "closed") return null;
 
   function enter() {
     try {
