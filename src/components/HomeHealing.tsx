@@ -70,7 +70,7 @@ export default function HomeHealing() {
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {items.map((it, i) => (
-          <PlantPhotoCard key={it.id} plant={it.plant} use={it.use} keeper={it.keeper} featured={i === 0} index={i} />
+          <PlantPhotoCard key={it.id} plant={it.plant} use={it.use} keeper={it.keeper} index={i} />
         ))}
       </div>
     </section>
@@ -81,13 +81,11 @@ function PlantPhotoCard({
   plant,
   use,
   keeper,
-  featured,
   index,
 }: {
   plant: Plant;
   use: string;
   keeper: string;
-  featured?: boolean;
   index: number;
 }) {
   // Stagger caps at 10 so the 30th card doesn't lag 1.2s behind the first.
@@ -95,9 +93,7 @@ function PlantPhotoCard({
   return (
     <Link
       href={`/plant/${plant.id}`}
-      className={`tile-lg reveal relative overflow-hidden group transition-transform duration-500 hover:-translate-y-1 ${
-        featured ? "sm:col-span-2 lg:col-span-1 min-h-[480px]" : "min-h-[400px]"
-      } flex flex-col justify-end`}
+      className="tile-lg reveal relative overflow-hidden group transition-transform duration-500 hover:-translate-y-1 min-h-[400px] flex flex-col justify-end"
       style={{ background: plant.color, "--i": i } as React.CSSProperties}
     >
       {/* Layer 1: real photo */}
@@ -135,8 +131,11 @@ function PlantPhotoCard({
           {plant.family}
         </div>
         <h3
-          className="mt-2 font-display tracking-brand leading-[0.95] text-[color:var(--bone)]"
-          style={{ fontSize: featured ? "clamp(2.4rem, 4vw, 3.4rem)" : "clamp(1.9rem, 2.7vw, 2.4rem)" }}
+          className="mt-2 font-display tracking-brand leading-[0.95] text-[color:var(--bone)] break-words"
+          style={{
+            fontSize: "clamp(1.65rem, 2.1vw, 2rem)",
+            textWrap: "balance",
+          }}
         >
           {plant.name}
         </h3>

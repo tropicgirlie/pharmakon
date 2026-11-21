@@ -12,32 +12,16 @@ export default function HomeHero({ totalPlants, totalCountries }: { totalPlants:
       <div className="h-24" />
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 pt-10 pb-20">
-        <div className="flex flex-wrap items-center gap-3 mb-10">
-          <span className="chip chip-outline">
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--urucum)] pulse-dot" />
-            A living archive, not an inventory
-          </span>
-          <span className="chip chip-forest">
-            <MaterialIcon name="forest" style={{ fontSize: 14 }} />
-            Amazon &amp; beyond
-          </span>
-          <span className="chip chip-ochre">
-            <MaterialIcon name="diversity_3" style={{ fontSize: 14 }} />
-            Credit the keepers
-          </span>
-        </div>
-
         {/* Main grid: headline left, image + accents right */}
         <div className="grid lg:grid-cols-[1.25fr_1fr] gap-8 lg:gap-12 items-start">
           {/* Headline block */}
           <div>
             <h1
               className="font-display tracking-brand text-[color:var(--ink)] leading-[0.88]"
-              style={{ fontSize: "clamp(3.5rem, 10vw, 10rem)" }}
+              style={{ fontSize: "clamp(3rem, 7.5vw, 8rem)", textWrap: "balance" }}
             >
               The forest<br />
-              <span className="italic text-[color:var(--urucum)]">is not</span>
-              <br />
+              <span className="italic text-[color:var(--urucum)]">is not</span>{" "}
               a commodity.
             </h1>
 
