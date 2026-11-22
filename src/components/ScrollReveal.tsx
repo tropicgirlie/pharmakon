@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Single IntersectionObserver that drives every `.reveal` element on the page.
@@ -8,12 +9,15 @@ import { useEffect } from "react";
  * cheaper than 30 effects. Elements start at opacity 0 (see globals.css) and
  * get `data-reveal-visible="true"` once they cross the viewport edge.
  *
- * Fallback for no-JS / reduced-motion: the layout root sets `data-js="on"` via
- * an inline script, which is the only thing that enables the hide-first CSS.
- * Without JS the cards stay visible. Users who prefer reduced motion get an
- * instant reveal with no transform, handled here.
+ * Re-scans on pathname change: this component lives in the root layout and is
+ * not remounted on soft nav, so without a pathname dep the observer would keep
+ * watching the previous page's nodes and leave the new page's `.reveal`
+ * elements stuck at opacity 0 (which looked like a huge white gap between
+ * sections on /countries).
  */
 export default function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const targets = document.querySelectorAll<HTMLElement>(".reveal");
@@ -37,7 +41,7 @@ export default function ScrollReveal() {
 
     targets.forEach(el => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }
